@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahnaf's World | Future Tech Hero</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+          --ocean-blue: #0077be;
+          --dark-green: #006400;
+          --theme-pink: #ff69b4;
+      }
+
+      body {
+          background-color: #1a1a1a;
+          color: white;
+          font-family: 'Arial', sans-serif;
+      }
+
+      .hero-section {
+          background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                      url('/api/placeholder/1200/400');
+          padding: 100px 0;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .hero-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle, var(--ocean-blue) 0%, transparent 70%);
+          opacity: 0.3;
+          animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+          0% { transform: scale(1); opacity: 0.3; }
+          50% { transform: scale(1.1); opacity: 0.2; }
+          100% { transform: scale(1); opacity: 0.3; }
+      }
+
+      .hero-title {
+          font-size: 3.5rem;
+          color: #fff;
+          text-shadow: 0 0 10px var(--ocean-blue);
+          margin-bottom: 20px;
+      }
+
+      .section-card {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          padding: 20px;
+          margin: 20px 0;
+          border: 2px solid var(--ocean-blue);
+          transition: transform 0.3s ease;
+      }
+
+      .section-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 20px var(--ocean-blue);
+      }
+
+      .section-title {
+          color: var(--ocean-blue);
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+      }
+
+      .list-item {
+          background: rgba(0, 119, 190, 0.1);
+          margin: 10px 0;
+          padding: 10px;
+          border-radius: 8px;
+          border-left: 4px solid var(--ocean-blue);
+      }
+
+      .dream-section {
+          background: linear-gradient(45deg, var(--dark-green), var(--ocean-blue));
+          padding: 40px;
+          border-radius: 15px;
+          margin: 20px 0;
+      }
+
+      .tech-icon {
+          font-size: 2rem;
+          margin: 10px;
+          color: var(--theme-pink);
+      }
+
+      footer {
+          background: var(--dark-green);
+          padding: 20px;
+          text-align: center;
+          margin-top: 50px;
+      }
+
+      .game-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 15px;
+      }
+
+      .game-item {
+          background: rgba(0, 119, 190, 0.15);
+          padding: 15px;
+          border-radius: 8px;
+          border-left: 4px solid var(--ocean-blue);
+          text-align: center;
+          transition: all 0.3s ease;
+      }
+
+      .game-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 15px var(--ocean-blue);
+          background: rgba(0, 119, 190, 0.25);
+      }
+
+      .game-icon {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+      }
+
+      .game-item {
+            background: rgba(0, 119, 190, 0.15);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--ocean-blue);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .game-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px var(--ocean-blue);
+            background: rgba(0, 119, 190, 0.25);
+            color: white;
+            text-decoration: none;
+        }
+
+        .game-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .game-title {
+            color: white;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Adding a subtle indicator that it's clickable */
+        .game-item::after {
+            content: '🔗';
+            font-size: 0.8rem;
+            opacity: 0;
+            margin-left: 5px;
+            transition: opacity 0.3s ease;
+        }
+
+        .game-item:hover::after {
+            opacity: 1;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">Syed Ahnaf Zuhair Bari Ehan</h1>
+        <p class="lead">Future Electronics Engineer | Tech Enthusiast</p>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="section-card">
+            <h2 class="section-title">
+              <i class="tech-icon">🎮</i>
+              Favorite Cartoons
+            </h2>
+            <div class="list-item">Grizzy and the lemmings</div>
+            <div class="list-item">Tobot</div>
+            <div class="list-item">Mini force</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="section-card">
+            <h2 class="section-title">
+              <i class="tech-icon">🎨</i>
+              Favorite Colors
+            </h2>
+            <div class="list-item">Ocean Blue</div>
+            <div class="list-item">Dark Green</div>
+            <div class="list-item">Pink</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Updated Games Section with Links -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-card">
+            <h2 class="section-title">
+              <i class="tech-icon">🎮</i>
+              Favorite Video Games
+            </h2>
+            <div class="game-grid">
+              <a
+                href="https://www.innersloth.com/games/among-us/"
+                class="game-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="game-icon">👾</div>
+                <div class="game-title">Among Us</div>
+              </a>
+              <a
+                href="https://www.roblox.com/"
+                class="game-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="game-icon">🎲</div>
+                <div class="game-title">Roblox</div>
+              </a>
+              <a
+                href="https://www.minecraft.net/"
+                class="game-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="game-icon">⛏️</div>
+                <div class="game-title">Minecraft</div>
+              </a>
+              <a
+                href="https://paper-io.com/"
+                class="game-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="game-icon">📱</div>
+                <div class="game-title">Paper.io 2</div>
+              </a>
+              <a
+                href="https://poki.com/en/g/melon-sandbox"
+                class="game-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="game-icon">🍈</div>
+                <div class="game-title">Melon Sandbox</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-card">
+            <h2 class="section-title">
+              <i class="tech-icon">🍔</i>
+              Favorite Foods
+            </h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="list-item">Chicken Fry</div>
+                <div class="list-item">Burger</div>
+              </div>
+              <div class="col-md-6">
+                <div class="list-item">Chicken Nugget</div>
+                <div class="list-item">Chicken Wings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dream-section">
+        <h2 class="section-title text-center">My Dream</h2>
+        <div class="row align-items-center">
+          <div class="col-md-8 offset-md-2 text-center">
+            <p class="h3">Becoming an Electronics Engineer</p>
+            <p class="lead">Building amazing devices like:</p>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="list-item m-2">Laptops 💻</div>
+              <div class="list-item m-2">Tablets 📱</div>
+              <div class="list-item m-2">Mobile Phones 📱</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2024 Ahnaf's World | Powered by Technology & Imagination</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
